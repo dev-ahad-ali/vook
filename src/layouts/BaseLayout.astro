@@ -1,3 +1,10 @@
+---
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+const { pageTitle } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -8,6 +15,13 @@
         <title>Vook</title>
     </head>
     <body>
+        <Header />
+        <h1>{pageTitle}</h1>
         <slot />
+        <Footer />
+
+        <script>
+            import "../scripts/menu.js";
+        </script>
     </body>
 </html>
